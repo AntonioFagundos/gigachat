@@ -1,0 +1,188 @@
+main{
+	background-color: #e9ffdf;
+}
+
+body{
+	background-color: #e9ffdf!important;
+}
+
+a{
+	color: #000000!important;
+	text-decoration-color: none;
+}
+
+.headlogo{
+	width: 100px;
+	border-radius: 50%;
+}
+
+h1{
+	text-align: center;
+	font-size: 16px;
+	font-weight: bold;
+	padding-bottom: 25px;
+}
+
+/* Шапка сайта */
+
+.navbar-nav{
+	font-size: 24px;
+}
+
+.navbar-nav li{
+	padding-left: 20px;
+}
+
+.navbar-nav a{
+	text-decoration: none;
+	color: black;
+}
+
+/* Страница "О нас" */
+
+.deviz{
+	display: flex;
+    text-align: center;
+    align-items: center;
+	font-size: 24px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.logocomp{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.logocomp img{
+	width: 400px;
+	border-radius: 20%;
+}
+
+.next{
+	padding-right: 30px;
+}
+
+.prew{
+	padding-left: 30px;
+}
+
+/* Страница "Каталог" */
+
+.bordercard{
+	margin: 10px;
+	padding: 15px;
+	border-style: solid;
+	border-radius: 10px;
+}
+
+.bordercard p{
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.bordercard button{
+	width: 120px;
+	height: 40px;
+	font-size: 18px;
+}
+
+.catimg{
+	width: 200px;
+	height: 200px;
+	border-radius: 20%;
+}
+
+.containerCat{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.basket{
+	display: flex;
+	justify-content: flex-end;
+	padding-right: 20px;
+}
+
+.basket img{
+	border-radius: 25%;
+	width: 100px;
+	height: 50px;
+}
+
+.basket p{
+	font-size: 16px;
+	font-weight: bold;
+	padding: 10px;
+}
+
+.btn a{
+	text-decoration: none;
+}
+
+/* Страница "Где нас найти" */
+
+.containerWhere{
+	width: 100%;
+	display: flex;
+}
+
+.map{
+	width: 850px;
+	padding-left: 100px;
+}
+
+.contacts ul{
+	font-size: 25px;
+	font-weight: bold;
+	list-style-type: none;
+	padding-top: 120px;
+}
+
+form{
+	padding-bottom: 20px;
+	padding-left: 30px;
+}
+
+select{
+	height: 35px;
+	width: 150px;
+}
+
+/* Страница "Товар" */
+
+.cards_solo{
+	border-style: solid;
+	border-radius: 10px;
+}
+
+.pros_name{
+	font-size: 28px;
+}
+
+.pros_price{
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.btn{
+	width: 150px;
+	height: 50px;
+}
+
+.pros{
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.catimg_solo{
+	width: 600px;
+	padding: 20px;
+}
+
+.containerSolo{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
