@@ -8,11 +8,15 @@
 
 				<img class="catimg_solo" src="{{ $pro -> photo }}">
 
-				<p class="pros_name">{{ $pro -> name }}</p>
+				<div class="cardsinfo">
 
-				<p class="pros_price">{{ $pro -> price }} руб.</p>
+					<p class="pros_name">{{ $pro -> name }}</p>
 
-				<button class="btn btn-success">Купить</button>
+					<p class="pros_price">{{ $pro -> price }} руб.</p>
+
+					<button class="btn btn-success">Купить</button>
+
+				</div>
 
 		</div>
 

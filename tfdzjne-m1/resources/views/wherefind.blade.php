@@ -6,13 +6,13 @@
 
 	<div class="containerWhere">
 		
-		<div class="map col-6">
+		<div class="map">
 			
 			<img class="map" src="/public/img/map.jpg">
 
 		</div>
 
-		<div class="contacts col-6">
+		<div class="contacts">
 			
 			<ul>
 				

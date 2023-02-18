@@ -21,8 +21,9 @@
 		</form>
 
 		<div class="basket col-6 d-flex">
-			<p>Корзина</p>
-			<img src="/public/img/basket.png">
+			<a href="/public/cart">
+				<p>Корзина</p>
+			</a>
 		</div>
 
 	</div>
@@ -33,13 +34,29 @@
 
 		<div class="bordercard">
 
-					<img class="catimg" src="{{ $pro -> photo }}">
+			<div class="imgsize">
 
-					<p>{{ $pro -> name }}</p>
+			<div class="imginner d-flex">
 
-					<p>{{ $pro -> price }} руб.</p>
+				<a href="/public/soloproduct/{{ $pro -> id }}">
 
-					<button class="btn btn-success" value="{{ $pro -> id }}"><a href="/public/soloproduct/{{ $pro -> id }}">Купить</a></button>
+					<img class="catimg img-fluid" src="{{ $pro -> photo }}">
+
+				</a>
+
+			</div>
+
+			</div>
+
+			<div class="carddown">
+
+				<p>{{ $pro -> name }}</p>
+
+				<p>{{ $pro -> price }} руб.</p>
+
+			<button class="btn btn-success" value="{{ $pro -> id }}"><a href="/public/cart">В корзину</a></button>
+
+			</div>
 
 		</div>
 

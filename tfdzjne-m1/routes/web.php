@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('weare');
 });
 
 Auth::routes();
@@ -30,4 +30,6 @@ Route::get('/filter', [App\Http\Controllers\CatalogController::class, 'filter'])
 
 Route::get('/wherefind', [App\Http\Controllers\CatalogController::class, 'wherefind'])->name('wherefind'); // Страница "Где нас найти"
 
-Route::get('/soloproduct/{id}', [App\Http\Controllers\DisplayProductController::class, 'soloproduct'])->name('sp');
+Route::get('/soloproduct/{id}', [App\Http\Controllers\DisplayProductController::class, 'soloproduct'])->name('sp'); // Страница "Товары"
+
+Route::get('/cart', [App\Http\Controllers\CartController::class, 'cart'])->name('cart'); // Страница "Корзина"
