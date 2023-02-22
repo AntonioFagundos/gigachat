@@ -245,16 +245,19 @@ select{
 
 /* Страница "Корзина" */
 
-.containerCart{
-	display: block;
-	width: 100%;
+.cartimg{
+	width: 200px;
+	height: auto;
 }
 
-.containerCart ul{
-	justify-content: flex-start;
+.rowcart{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	border: 2px solid black;
 }
 
-.containerCart li{
-	list-style-type: none;
-	padding: 5px;
+.rowcart p{
+	font-size: 16px;
+	font-weight: bold;
 }

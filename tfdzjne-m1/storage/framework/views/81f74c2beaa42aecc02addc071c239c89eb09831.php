@@ -36,15 +36,15 @@
 
 			<div class="imgsize">
 
-			<div class="imginner d-flex">
+				<div class="imginner d-flex">
 
-				<a href="/public/soloproduct/<?php echo e($pro -> id); ?>">
+					<a href="/public/soloproduct/<?php echo e($pro -> id); ?>">
 
-					<img class="catimg img-fluid" src="<?php echo e($pro -> photo); ?>">
+						<img class="catimg img-fluid" src="<?php echo e($pro -> photo); ?>">
 
-				</a>
+					</a>
 
-			</div>
+				</div>
 
 			</div>
 
@@ -54,7 +54,7 @@
 
 				<p><?php echo e($pro -> price); ?> руб.</p>
 
-			<button class="btn btn-success" value="<?php echo e($pro -> id); ?>"><a href="/public/cart">В корзину</a></button>
+			<button class="btn btn-success" value="<?php echo e($pro -> id); ?>"><a href="/public/cart/<?php echo e($pro -> id); ?>">В корзину</a></button>
 
 			</div>
 

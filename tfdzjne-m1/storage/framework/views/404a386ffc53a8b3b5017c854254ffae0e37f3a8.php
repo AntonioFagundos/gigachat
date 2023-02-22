@@ -2,28 +2,23 @@
 
 <?php $__env->startSection('content'); ?>
 
-    <div class="containerCart">
+    <div class="container">
 
-        <div class="tablecart d-block">
+        <?php $__currentLoopData = $Cart; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $c): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 
-            <ul class="thname d-flex">
-                <li>Название</li>
-                <li>Цена</li>
-                <li>Количество</li>
-            </ul>
+            <div class="rowcart d-flex">
+                <div class="cartimg">
+                    <img src="<?php echo e($c -> cartpro -> photo); ?>">
+                </div>
+                <p> <?php echo e($c -> cartpro -> name); ?> </p>
+                <p> <?php echo e($c -> cartpro -> country); ?> </p>
+                <p> <?php echo e($c -> cartpro -> price); ?> </p>
+                <p> <?php echo e($c -> cartpro -> quantity); ?> </p>
+                <button value="<?php echo e($c -> cartpro -> id); ?>">x</button>
 
-            <ul class="tdname d-flex">
-                <li>varchar</li>
-                <li>int</li>
-                <li>int</li>
-            </ul>
+            </div>
 
-            <!-- <table>
-                <tr><th>Название</th><th>Цена</th><th>Количество</th></tr>
-                <tr><td>string</td><td>int</td><td>int</td></tr>
-            </table> -->
-
-        </div>
+        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
     </div>
 

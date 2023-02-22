@@ -21,7 +21,7 @@
 		<div class="slider d-flex justify-content-center align-items-center">
 			
 			<div class="next"><img src="/public/img/next.png"></div>
-			<div class="photo"><img src="/public/img/pro1.jpeg"></div>
+			<div class="photo"><img src="/public/img/pro1.jpg"></div>
 			<div class="prew"><img src="/public/img/prew.png"></div>
 
 		</div>

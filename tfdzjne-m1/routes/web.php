@@ -32,4 +32,4 @@ Route::get('/wherefind', [App\Http\Controllers\CatalogController::class, 'wheref
 
 Route::get('/soloproduct/{id}', [App\Http\Controllers\DisplayProductController::class, 'soloproduct'])->name('sp'); // Страница "Товары"
 
-Route::get('/cart', [App\Http\Controllers\CartController::class, 'cart'])->name('cart'); // Страница "Корзина"
+Route::get('/cart/{id}', [App\Http\Controllers\CartController::class, 'addToCart'])->name('cart'); // Страница "Корзина"

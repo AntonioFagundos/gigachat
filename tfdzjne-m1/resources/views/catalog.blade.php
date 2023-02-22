@@ -36,15 +36,15 @@
 
 			<div class="imgsize">
 
-			<div class="imginner d-flex">
+				<div class="imginner d-flex">
 
-				<a href="/public/soloproduct/{{ $pro -> id }}">
+					<a href="/public/soloproduct/{{ $pro -> id }}">
 
-					<img class="catimg img-fluid" src="{{ $pro -> photo }}">
+						<img class="catimg img-fluid" src="{{ $pro -> photo }}">
 
-				</a>
+					</a>
 
-			</div>
+				</div>
 
 			</div>
 
@@ -54,7 +54,7 @@
 
 				<p>{{ $pro -> price }} руб.</p>
 
-			<button class="btn btn-success" value="{{ $pro -> id }}"><a href="/public/cart">В корзину</a></button>
+			<button class="btn btn-success" value="{{ $pro -> id }}"><a href="/public/cart/{{ $pro -> id }}">В корзину</a></button>
 
 			</div>
 

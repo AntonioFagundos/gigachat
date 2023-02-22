@@ -2,28 +2,23 @@
 
 @section('content')
 
-    <div class="containerCart">
+    <div class="container">
 
-        <div class="tablecart d-block">
+        @foreach ($Cart as $c)
 
-            <ul class="thname d-flex">
-                <li>Название</li>
-                <li>Цена</li>
-                <li>Количество</li>
-            </ul>
+            <div class="rowcart d-flex">
+                <div class="cartimg">
+                    <img src="{{ $c -> cartpro -> photo }}">
+                </div>
+                <p> {{ $c -> cartpro -> name }} </p>
+                <p> {{ $c -> cartpro -> country }} </p>
+                <p> {{ $c -> cartpro -> price }} </p>
+                <p> {{ $c -> cartpro -> quantity }} </p>
+                <button value="{{ $c -> cartpro -> id }}">x</button>
 
-            <ul class="tdname d-flex">
-                <li>varchar</li>
-                <li>int</li>
-                <li>int</li>
-            </ul>
+            </div>
 
-            <!-- <table>
-                <tr><th>Название</th><th>Цена</th><th>Количество</th></tr>
-                <tr><td>string</td><td>int</td><td>int</td></tr>
-            </table> -->
-
-        </div>
+        @endforeach
 
     </div>
 
