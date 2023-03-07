@@ -4,17 +4,29 @@
 
     <div class="container">
 
+        <h1>Корзина</h1>
+
+        <div class="knopka">
+
+        <button class="btn btn-success"><a href="/public/catalog">Назад</a></button>
+
+        </div>
+
         @foreach ($Cart as $c)
 
-            <div class="rowcart d-flex">
+            <div class="cart-t">
+
                 <div class="cartimg">
-                    <img src="{{ $c -> cartpro -> photo }}">
+                    <img class="img-fluid" src="{{ $c -> cartpro -> photo }}">
                 </div>
-                <p> {{ $c -> cartpro -> name }} </p>
-                <p> {{ $c -> cartpro -> country }} </p>
-                <p> {{ $c -> cartpro -> price }} </p>
-                <p> {{ $c -> cartpro -> quantity }} </p>
-                <button value="{{ $c -> cartpro -> id }}">x</button>
+                
+                <p>{{ $c -> cartpro -> name }}</p>
+                <p>Цена: {{ $c -> cartpro ->price * $c->quantity }} Р</p>
+                <div class="m-p">
+                    <a class="minus" href="/public/cart/minus/{{ $c -> id }}">-</a>
+                    <p>{{ $c -> quantity }}</p>
+                    <a class="plus" href="/public/cart/plus/{{ $c -> id }}">+</a>
+                </div>
 
             </div>
 

@@ -4,17 +4,29 @@
 
     <div class="container">
 
+        <h1>Корзина</h1>
+
+        <div class="knopka">
+
+        <button class="btn btn-success"><a href="/public/catalog">Назад</a></button>
+
+        </div>
+
         <?php $__currentLoopData = $Cart; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $c): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 
-            <div class="rowcart d-flex">
+            <div class="cart-t">
+
                 <div class="cartimg">
-                    <img src="<?php echo e($c -> cartpro -> photo); ?>">
+                    <img class="img-fluid" src="<?php echo e($c -> cartpro -> photo); ?>">
                 </div>
-                <p> <?php echo e($c -> cartpro -> name); ?> </p>
-                <p> <?php echo e($c -> cartpro -> country); ?> </p>
-                <p> <?php echo e($c -> cartpro -> price); ?> </p>
-                <p> <?php echo e($c -> cartpro -> quantity); ?> </p>
-                <button value="<?php echo e($c -> cartpro -> id); ?>">x</button>
+                
+                <p><?php echo e($c -> cartpro -> name); ?></p>
+                <p>Цена: <?php echo e($c -> cartpro ->price * $c->quantity); ?> Р</p>
+                <div class="m-p">
+                    <a class="minus" href="/public/cart/minus/<?php echo e($c -> id); ?>">-</a>
+                    <p><?php echo e($c -> quantity); ?></p>
+                    <a class="plus" href="/public/cart/plus/<?php echo e($c -> id); ?>">+</a>
+                </div>
 
             </div>
 

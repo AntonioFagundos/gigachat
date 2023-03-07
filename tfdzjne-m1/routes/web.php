@@ -33,3 +33,9 @@ Route::get('/wherefind', [App\Http\Controllers\CatalogController::class, 'wheref
 Route::get('/soloproduct/{id}', [App\Http\Controllers\DisplayProductController::class, 'soloproduct'])->name('sp'); // Страница "Товары"
 
 Route::get('/cart/{id}', [App\Http\Controllers\CartController::class, 'addToCart'])->name('cart'); // Страница "Корзина"
+
+Route::get('/cart', [App\Http\Controllers\CartController::class, 'cartList'])->name('cart');
+
+Route::get('/cart/minus/{id}', [App\Http\Controllers\CartController::class, 'removeCart'])->name('cartR');
+
+Route::get('/cart/plus/{id}', [App\Http\Controllers\CartController::class, 'addQuantity'])->name('cartQ');

@@ -13,7 +13,7 @@ class CartController extends Controller
     public function cartList(){
 
     	$cartItems = Cart::get();
-        return view('cart', compact('cartItems'));
+        return view('cart', ['Cart'=>$cartItems]);
     }
 
     public function addToCart($product_id){
@@ -31,11 +31,31 @@ class CartController extends Controller
     	return view('cart', ['Cart'=>$cart]);
     }
 
-    public function removeCart(Request $req){
+    public function removeCart($id){
 
-    	$cartItems = Cart::remove($req->id);
+        $cart = Cart::find($id);
+        $cart->quantity--;
+        if($cart->quantity == 0)
+        {
+            $cart->delete();
+        }
+        else{
+            $cart->save();
+        }
+        return redirect('/cart');
+    }
 
-    	return view('cart', ['Cart'=>$cartItems]);
+    public function addQuantity($id){
+
+        $cart = Cart::find($id);
+        $product = Products::find($cart->product_id);
+        $cart->quantity++;
+        if($cart->quantity > $product->quantity)
+        {
+            $cart-> quantity--;
+        }
+        $cart->save();
+        return redirect('/cart');
     }
 
 }

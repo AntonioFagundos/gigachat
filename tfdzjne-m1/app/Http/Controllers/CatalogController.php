@@ -17,7 +17,7 @@ class CatalogController extends Controller
 
     public function filter(Request $req){
 
-    	$product = Products::where('cat_id', $req->category_filter)->orderBy($req->select_filter, 'desc')->get(); /* Сортировка не работает, не может найти Category */
+    	$product = Products::where('cat_id', $req->category_filter)->orderBy($req->select_filter, 'desc')->get();
     	$categ = Category::all();
     	return view('catalog', ['Category' => $categ, 'Products' => $product]);
 
